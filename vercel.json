@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "rewrites": [
+  "redirects": [
     {
       "source": "/",
       "has": [
@@ -10,7 +10,8 @@
           "value": "^curl/.+"
         }
       ],
-      "destination": "/cli.txt"
+      "destination": "/cli.txt",
+      "permanent": false
     }
   ]
 }
