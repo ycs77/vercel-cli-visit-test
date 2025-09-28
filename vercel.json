@@ -1,40 +1,29 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-	"rewrites": [
-		{
-			"source": "/",
-			"has": [
-				{
-					"type": "header",
-					"key": "user-agent",
-					"value": "^curl/.+"
-				}
-			],
-			"destination": "/cli.txt"
-		},
-		{
-			"source": "/cli",
-			"has": [
-				{
-					"type": "header",
-					"key": "user-agent",
-					"value": "^curl/.+"
-				}
-			],
-			"destination": "/cli.txt"
-		}
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "^curl/.+"
+        }
+      ],
+      "destination": "/cli.txt"
+    }
   ],
-	"redirects": [
-		{
-			"source": "/cli",
-			"missing": [
-				{
-					"type": "header",
-					"key": "user-agent",
-					"value": "^curl/.+"
-				}
-			],
-			"destination": "/"
-		}
-	]
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "^curl/.+"
+        }
+      ],
+      "destination": "/cli.txt"
+    }
+  ]
 }
