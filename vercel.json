@@ -1,4 +1,7 @@
 {
+	"rewrites": [
+    { "source": "/cli", "destination": "/cli.txt" }
+  ],
   "github": {
     "silent": true
   }
